@@ -40,7 +40,7 @@ public class PalindromeCheckerApp {
             }
         }
 
-        // Output result
+
         if (isPalindrome) {
             System.out.println("It is a Palindrome ✅");
         } else {
