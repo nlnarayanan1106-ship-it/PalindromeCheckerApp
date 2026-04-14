@@ -18,7 +18,7 @@ public class PalindromeCheckerApp {
         System.out.print("Enter a string: ");
         String input = sc.nextLine();
 
-        input = input.toLowerCase().replaceAll("[^a-z0-9]", "");
+        input = input.toLowerCase().replaceAll(" ", "");
 
         if (isPalindrome(input, 0, input.length() - 1)) {
             System.out.println("It is a Palindrome ✅");
