@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class PalindromeCheckerApp {
     public static void main(String[] args) {
 
@@ -5,17 +7,26 @@ public class PalindromeCheckerApp {
         System.out.println("   Welcome to Palindrome Checker App ");
         System.out.println("=====================================");
 
-        String word = "madam";
+        Scanner sc = new Scanner(System.in);
+
+        // Take input from user
+        System.out.print("Enter a string: ");
+        String word = sc.nextLine();
+
         String reversed = "";
 
+        // Reverse the string
         for (int i = word.length() - 1; i >= 0; i--) {
-            reversed += word.charAt(i);
+            reversed = reversed + word.charAt(i);
         }
 
+        // Compare
         if (word.equals(reversed)) {
             System.out.println(word + " is a Palindrome ✅");
         } else {
             System.out.println(word + " is NOT a Palindrome ❌");
         }
+
+        sc.close();
     }
 }
